@@ -17,7 +17,7 @@ function initError(){
 function handleNavigation(event){
     if (pseudo){
         initError();
-        button.childNodes[1].setAttribute("href","etrange_decouverte.html")
+        button.childNodes[1].setAttribute("href","HTML/etrange_decouverte.html")
         localStorage.setItem("pseudo",pseudo);
         button.childNodes[1].click()
     } else {
