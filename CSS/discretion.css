@@ -134,3 +134,11 @@ body {
                 #names{
                     margin : 0;
                 }
+
+p {
+    margin:0;
+}
+
+#lastText{
+    margin-bottom: 5vh;
+}
