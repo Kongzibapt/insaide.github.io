@@ -1,0 +1,275 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-family: 'Special Elite', cursive;
+    background-color: black;
+    height: 95vh;
+}
+
+    header {
+        color: #BF0909;
+        font-family: 'Special Elite', cursive;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height:15vh;
+        z-index:0;
+    }
+        h1 {
+            font-size: min(4vw,7vh);
+            margin-bottom:0.5vw;
+        }
+
+        header a {
+            font-size: min(1vw,1.7vh);
+            text-decoration: none;
+            color: #494949;
+        }
+
+        header a:hover {
+            color: white;
+        }
+
+    #main {
+        display: flex;
+        height:65vh;
+    }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50vw;
+        }
+
+            #text {
+                margin-top:4vh;
+                font-family: 'Special Elite', cursive;
+                font-size: min(1.8vw,3.6vh);
+                text-align: center;
+                color: white;
+                cursor:default;
+            }
+
+
+
+
+                .phrase{
+                    opacity:0;
+                    margin:0.1vh 0vw 0.1vh 0vw;
+                    
+                }
+
+                #p1{
+                    animation: fade 2s forwards;
+                }
+
+                @keyframes fade {
+                    0% {opacity :0}
+                    100% {opacity:1}
+                }
+
+                @keyframes fade-reverse {
+                    0% {opacity :1}
+                    100% {opacity:0}
+                }
+
+                    #p1{animation-delay:0.5s}
+
+
+
+
+                .mot{
+                    margin:0;
+                }
+
+                #boisson{
+                    color:#086CA5;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: min(1.8vw,3.6vh);
+                    font-family: 'Special Elite', cursive;
+                    background:black;
+                    border:none;
+                    cursor: pointer;
+                    -moz-appearance: none;
+                    background: transparent;
+                    background-image: url("../Images/Arrow.png");
+                    background-repeat: no-repeat;
+                    background-size:min(1vw,1.7vh);
+                    background-position-x: 0vw;
+                    background-position-y: min(0.4 vw,1vh);
+                    padding-left:1.2vw;
+                }
+
+                #boisson:focus{
+                    outline:none
+                }
+
+                #boisson option{
+                    background:black;
+                    border:none;
+                    font: -moz-pull-down-menu;
+                }
+
+            #arrowBlock{
+                height:2vh;
+                width:50vw;
+                
+            }
+
+                #space{
+                    font-size: 1vw;
+                    font-family: 'Special Elite', cursive;
+                    position:relative;
+                    right:-20vw;
+                    top:2.5vh;
+                }
+
+                #arrow{
+                    height:2vh;
+                    width:auto;
+                    position:relative;
+                    right:-25vw;
+                    top:-3vh;
+                    animation: bounce 1s forwards;
+                    animation-iteration-count:infinite;
+                }
+
+            @keyframes bounce {
+                50% {top:-6vh}
+            }
+
+            #buttons {
+                display: flex;
+                justify-content: space-around;
+                margin-top:5vh;
+                opacity:0;
+            }
+
+            .button {
+                outline: none;
+                border:0.2vw solid #b9b9b9;
+                border-radius: 4vw;
+                width:20vw;
+                padding: 1vw 1.2vw 1vw 1.2vw;
+                color: black;
+                font-family: 'Special Elite', cursive;
+                font-size: 1.5vw;
+                background-image: linear-gradient(to top, black -50%, #BF0909 80%);
+                cursor : pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .button:hover {
+                border: 0.2vw solid white;
+                box-shadow: 0 0 3vw  #B0C4DE;
+            }
+
+            .button:active {
+                background-image: linear-gradient(to top, #BF0909 20%, black 150%);
+            }
+
+            #link{
+                text-decoration:none;
+                padding:0;
+                
+            }
+
+            #link:hover{
+                text-decoration:none;
+            }
+
+            footer{
+                height:15vh;
+                display:flex;
+                flex-direction: column;
+                justify-content:flex-end;
+                align-items: center;
+                font-size:1vw;
+                margin-top:2vw;
+            }
+            
+                #names{
+                    margin : 0;
+                }
+
+                #rights{
+                    margin-bottom:0;
+                }
+
+#eyeBlock{
+    width:100vw;
+    height:95vh;
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    opacity:0;
+    z-index:-1;
+}
+
+
+    #supEye{
+        flex:1;
+        background-color:black;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #eye{
+        flex:1;
+        background:radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 73.44%, black 100%);
+        
+    }
+
+        .endText{
+            opacity:0;
+            flex:1;
+            text-align: center;
+            font-family: 'Special Elite', cursive;
+            
+        }
+
+        #loose{
+            font-size:3vw;
+        }
+
+        #return {
+            text-decoration: none;
+            color: #494949;
+            font-size:1.5vw
+        }
+
+        #return:hover {
+            color: white;
+        }
+
+    #infEye{
+        flex:1;
+        background-color:black;
+        display:flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    @keyframes blinking1 {
+        100% {flex:0.3}
+    }
+
+    @keyframes blinking2 {
+        0% {flex:0.3}
+        100% {flex:0.7}
+    }
+
+    @keyframes blinking3 {
+        0% {flex:0.7}
+        100% {flex:0}
+    }
+

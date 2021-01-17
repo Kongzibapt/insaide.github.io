@@ -1,0 +1,203 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-family: 'Special Elite', cursive;
+    background-color: black;
+    height: 95vh;
+}
+
+    header {
+        color: #BF0909;
+        height: auto;
+        font-family: 'Special Elite', cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+        h1 {
+            text-decoration: none;
+            font-size: 4vw;
+        }
+
+        nav {
+            margin-bottom: 5vh;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #494949;
+        }
+
+        header a:hover {
+            color: white;
+        }
+
+    #main {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 4;
+    }
+
+        #content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+            #content aside {
+                display : flex;
+                flex-direction: column;
+                justify-content: space-around;
+                max-width: 25vw;
+            }
+
+            #firstText {
+                opacity:0;
+                animation: fade 2s forwards;
+                animation-delay: 1s;
+            }
+
+            .textWillAppear {
+                opacity: 0;
+            }
+
+            .questionWillAppear {
+                opacity: 0;
+                text-align: center;
+            }
+
+                /* Animations des questions sur les côtés */
+                #question1 {
+                    animation: levite 3s forwards infinite ease-in-out;
+                }   
+
+                #question2 {
+                    animation: levite 3s forwards infinite ease-in-out;
+                    animation-delay: 1s;
+                } 
+
+                #question3 {
+                    animation: levite 3s forwards infinite ease-in-out;
+                    animation-delay: 2s;
+                } 
+
+                #question4 {
+                    animation: levite 3s forwards infinite ease-in-out;
+                    animation-delay: 3s;
+                } 
+
+                @keyframes levite {
+                    50% {transform: translate(0,-3vh);}
+                }
+
+                @keyframes fade {
+                    100% {opacity: 1;}
+                }
+
+            #text {
+                font-family: 'Special Elite', cursive;
+                font-size: 1.8vw;
+                text-align: center;
+                color: white;
+                max-width: 40vw;
+            }
+
+                #text p {
+                    margin: 0.1vh 0 0.1vh 0;
+                }
+
+                #friendInput{
+                    font-family:'Special Elite',cursive;
+                    font-size:1.5vw;
+                    border-radius:1vw;
+                    height:2.5vh;
+                    width: 15vw;
+                    padding:0.5vw 0.7vw 0.3vw 0.7vw;
+                }
+
+                #friendInput:focus{
+                    outline:none;
+                    font-family:'Special Elite',cursive;
+                    font-size:1.5vw;
+                    border-radius:1vw;
+                    padding:0.5vw 0.7vw 0.3vw 0.7vw;
+                }
+
+            #arrowBlock{
+                display:flex;
+                justify-content: flex-end;
+                height: 2vh;
+                width: 45vw;
+            }
+
+                #space{
+                    font-size: 1vw;
+                    font-family: 'Special Elite', cursive;
+                    padding-right: 1vw;
+                }
+
+                #arrow{
+                    height: 2vh;
+                    animation: bounce 1s forwards;
+                    animation-iteration-count:infinite;
+                }
+
+                @keyframes bounce {
+                    50% {transform: translate(0, -1em);}
+                }
+
+                @keyframes fade-reverse {
+                    0% {opacity :1}
+                    100% {opacity:0}
+                }
+
+            #buttons {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .button {
+                opacity: 0;
+                outline: none;
+                border:0.2vw solid #b9b9b9;
+                border-radius: 4vw;
+                min-width: 15vw;
+                width: 20vw;
+                padding: 1vw 1.2vw 1vw 1.2vw;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                font-family: 'Special Elite', cursive;
+                font-size: 0.8vw;
+                background-image: linear-gradient(to top, black -50%, #BF0909 80%);
+                cursor : pointer;
+            }
+
+            .button:hover {
+                border: 0.2vw solid white;
+                box-shadow: 0 0 3vw  #B0C4DE;
+            }
+
+            .button:active {
+                background-image: linear-gradient(to top, #BF0909 20%, black 150%);
+            }
+
+    footer{
+        flex:0.5;
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items: center;
+        font-size:1vw;
+        margin-top:2vw;
+    }
+    
+        #names{
+            margin : 0;
+        }

@@ -1,0 +1,2 @@
+Attention, course.mp3 ne sera lu que si le navigateur accepte la lecture
+automatique d'audio (pas d'erreurs sinon, mais pas de musique non plus)

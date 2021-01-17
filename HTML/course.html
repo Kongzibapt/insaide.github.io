@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courrez!</title>
+    <link rel="shortcut icon" href="../Images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/QTE.css">
+  </head>
+  <body style="background: #050505">
+  <!-- mise en place de la musique   PAS TERMINEE-->
+   <audio autoplay hidden><source src="../Sounds/course.mp3" preload="auto" ></audio> 
+  
+    <canvas id="display" width="1288" height="666">
+ 
+    <script>
+	
+      var amorti=0.8;
+	  var t=0;
+      function Particle(x, y) {
+        this.x = this.oldX = x;
+        this.y = this.oldY = y;
+      }
+//une bonne partie de ce code vient de PlayfulJS
+      Particle.prototype.integrate = function() {
+        var velocityX = (this.x - this.oldX) * amorti;
+        var velocityY = (this.y - this.oldY) * amorti;
+		this.oldX = this.x;
+        this.oldY = this.y;
+        this.x += velocityX;
+        this.y += velocityY;
+		t++
+		if (t>10 && Math.round(this.x/10)==Math.round(mouse.x/10) && Math.round(this.y/12)==Math.round(mouse.y/12)){window.location.replace("./coursefail.html");}
+		//j'ai round parce que sinon au pixel près c'était ridicule
+		if (t==310){amorti=0.86;}
+		if (t==550){amorti=0.92;}
+		if (t==800){amorti=0.97;}//on augmente la vitesse de suivi (1 seconde tous les t+=60)
+		if (t==1030){amorti=0.99;}
+		if (t==1260){amorti=0.8;}
+		if (t==1325){window.location.replace("./couloir.html")}//condition de succès: tenir assez longtemps
+      };
+//on ajoute des méthodes à l'objet Particle
+      Particle.prototype.Sattract = function(x, y) {
+        var dx = x - this.x;
+        var dy = y - this.y;
+        var distance = Math.sqrt(dx * dx + dy * dy);//cela permet aussi d'avoir une valeur positive...
+        this.x += dx / (distance+1);//...strictement
+        this.y += dy / (distance+1);
+      };
+//ctx permet de tracer sur le canvas
+      Particle.prototype.draw = function() {
+        ctx.strokeStyle = '#fa0000';
+        ctx.lineWidth = 42;
+        ctx.beginPath();
+        ctx.moveTo(this.oldX, this.oldY);
+        ctx.lineTo(this.x, this.y);
+        ctx.stroke();
+		};
+
+      var display = document.getElementById('display');
+      var ctx = display.getContext('2d');
+      var particles = [];
+      var width = display.width = window.innerWidth;
+      var height = display.height = window.innerHeight;
+      var mouse = { x: width * 0.5, y: height * 0.5 };
+
+      	particle= new Particle(0.9*width, 0.1 * height);
+
+      display.addEventListener('mousemove', onMousemove);
+
+      function onMousemove(e) {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      }
+
+      requestAnimationFrame(frame);
+	
+      function frame() {
+        requestAnimationFrame(frame);
+        ctx.clearRect(0, 0, width, height);
+          particle.Sattract(mouse.x, mouse.y);
+		  particle.integrate();
+          particle.draw();
+      }
+
+	
+    </script>  
+
+</canvas></body>
+</html>

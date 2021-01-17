@@ -1,0 +1,160 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-family: 'Special Elite', cursive;
+    background-color: black;
+    height: 95vh;
+}
+
+    header {
+        color: #BF0909;
+        font-family: 'Special Elite', cursive;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height:15vh;
+        z-index:0;
+    }
+        h1 {
+            font-size: min(4vw,7vh);
+            margin-bottom:0.5vw;
+        }
+
+        header a {
+            font-size: min(1vw,1.7vh);
+            text-decoration: none;
+            color: #494949;
+        }
+
+        header a:hover {
+            color: white;
+        }
+
+    #main {
+        display: flex;
+        height:65vh;
+    }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50vw;
+        }
+
+            #text {
+                margin-top:4vh;
+                font-family: 'Special Elite', cursive;
+                font-size: min(1.8vw,3.6vh);
+                text-align: center;
+                color: white;
+                cursor:default;
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #p1{
+                opacity:0;
+                margin:0.1vh 0vw 0.1vh 0vw;
+                animation: fade 2s forwards;
+                
+            }
+
+            #codeBlock{
+                opacity:0;
+                animation: fade 2s forwards 1s;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                margin-top:5vh;
+                width:80vw;
+                height:20vh;
+            }
+
+                #codeTxtL1{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+
+                #codeTxtL2{
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+            @keyframes fade {
+                0% {opacity :0}
+                100% {opacity:1}
+            }
+
+            #buttons {
+                display: flex;
+                justify-content: space-around;
+                margin-top:5vh;
+                opacity:0;
+                animation: fade 2s forwards 2s;
+            }
+
+            .button {
+                outline: none;
+                border:0.2vw solid #b9b9b9;
+                border-radius: 4vw;
+                width:15vw;
+                padding: 1vw 1.2vw 1vw 1.2vw;
+                color: black;
+                font-family: 'Special Elite', cursive;
+                font-size: 1.5vw;
+                
+                cursor : pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .button:hover {
+                border: 0.2vw solid white;
+                box-shadow: 0 0 3vw  #B0C4DE;
+            }
+
+            #reset:active {
+                background-image: linear-gradient(to top, #BF0909 20%, black 150%);
+            }
+
+            #reset {
+                background-image: linear-gradient(to top, black -50%, #BF0909 80%);
+            }
+
+            #validate:active {
+                background-image: linear-gradient(to top, #057B26 20%, black 150%);
+            }
+
+            #validate {
+                background-image: linear-gradient(to top, black -50%, #057B26 80%);
+            }
+
+    footer{
+        height:15vh;
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items: center;
+        font-size:1vw;
+        margin-top:2vw;
+    }
+    
+        #names{
+            margin : 0;
+        }
+
+        #rights{
+            margin-bottom:0;
+        }

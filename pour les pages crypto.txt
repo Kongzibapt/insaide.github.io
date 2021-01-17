@@ -1,0 +1,4 @@
+Pour éviter de casser git, je n'ai pas implémenté la musique dans les pages du code secret.
+Pour ça, mettez simplement cette ligne:
+<audio autoplay loop hidden><source src="../Sounds/crypto.mp3" preload="auto" ></audio> 
+au début du body.

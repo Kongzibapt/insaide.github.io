@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSAïde</title>
+    <link rel="shortcut icon" href="../Images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/couloir_ami.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <script defer type="text/javascript" src="../JAVASCRIPT/couloir_ami.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Un couloir, trois étudiants</h1>
+        <nav><a href='./menu.html'>Retourner au menu</a></nav>
+    </header>
+    <main id="main">
+        <section id="content">
+            <article id="text">
+                <p class="firstText">Votre fidèle acolyte <span class="nomAmi"></span> et vous-mêmes revenez sur les lieux</p>
+                <P class="textWillAppear">Vous apercevez de nouveau cette personne, il a l'air de se rendre au sous-sol quotidiennement</p>
+                <p class="textWillAppear">Cette fois-ci, il ne vous court pas après</p>
+                <p class="textWillAppear">Que faites-vous ?</p>
+                <div id="arrowBlock">
+                    <p id="space">Press enter</p>
+                    <img id="arrow" src="../Images/Lecture.png" alt="Texte suivant"/>
+                </div>
+            </article>
+            <div id="buttons">
+                <button id="button1" class="button" onclick="window.location.href = './aide_ami.html';" disabled=true>"Non franchement <span class="nomAmi"></span>, je te jure je ne peux pas aller plus loin"</button>
+                <button id="button2" class="button" onclick="window.location.href = './crypto_seul.html';" disabled=true>Attendre qu'ils rentrent, prendre votre courage à quatre mains, et s'aventurer jusqu'à cette salle</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p id="names">Copyright © 2020 Florian EHR - Pierre FAVARY - Baptiste MARTY</p>
+        <p id="rights">Tous droits réservés </p>
+    </footer>
+</body>
+</html>

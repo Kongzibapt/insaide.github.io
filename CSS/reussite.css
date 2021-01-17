@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    font-family: 'Special Elite', cursive;
+    background-color: black;
+    height: 95vh;
+}
+
+    header {
+        color: #BF0909;
+        font-family: 'Special Elite', cursive;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height:15vh;
+        z-index:0;
+    }
+        h1 {
+            font-size: min(4vw,7vh);
+            margin-bottom:0.5vw;
+        }
+
+        header a {
+            font-size: min(1vw,1.7vh);
+            text-decoration: none;
+            color: #494949;
+        }
+
+        header a:hover {
+            color: white;
+        }
+
+    #main {
+        display: flex;
+        height:65vh;
+    }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50vw;
+        }
+
+            #text {
+                margin-top:4vh;
+                font-family: 'Special Elite', cursive;
+                font-size: min(1.8vw,3.6vh);
+                text-align: center;
+                color: white;
+                cursor:default;
+                display:flex;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #p1{
+                opacity:0;
+                margin:0.1vh 0vw 0.1vh 0vw;
+                animation: fade 2s forwards;
+                
+            }
+
+            @keyframes fade {
+                0% {opacity :0}
+                100% {opacity:1}
+            }
+
+footer{
+    height:15vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items: center;
+    font-size:1vw;
+    margin-top:2vw;
+}
+
+    #names{
+        margin : 0;
+    }
+
+    #rights{
+        margin-bottom:0;
+    }
