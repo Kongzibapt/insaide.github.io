@@ -13,8 +13,8 @@ let NB_BUTTONS = 1;
 let NB_ELEMENTS_TO_APPEAR = NB_TEXTS + NB_BUTTONS;
 
 //------------------ Fonctions ------------------//
-for (let i = 0 ; i<nomAmi.length ; i++) {
-    nomAmi[i].innerHTML = localStorage.getItem('friendPseudo');
+for (let span in nomAmi) {
+    nomAmi[span].innerHTML = localStorage.getItem('friendPseudo');
 }
 //gère les apparitions et disparitions des textes
 function makeNextTextAppear(event) {
