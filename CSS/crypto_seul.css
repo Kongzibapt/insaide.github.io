@@ -150,6 +150,10 @@ body {
         font-size:1vw;
         margin-top:2vw;
     }
+
+    td{
+        text-align: center;
+    }
     
         #names{
             margin : 0;

@@ -100,6 +100,10 @@ body {
                     100% {opacity: 1;}
                 }
 
+                td{
+                    text-align: center;
+                }
+
             #text {
                 font-family: 'Special Elite', cursive;
                 font-size: 1.8vw;

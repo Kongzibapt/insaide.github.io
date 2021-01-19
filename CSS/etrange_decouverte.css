@@ -9,6 +9,10 @@ body {
     height: 95vh;
 }
 
+td{
+    text-align: center;
+}
+
     header {
         color: #BF0909;
         font-family: 'Special Elite', cursive;

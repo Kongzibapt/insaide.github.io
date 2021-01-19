@@ -12,6 +12,10 @@ body {
     @keyframes fondu {
         100% {opacity : 0;}
     }
+
+    td{
+        text-align: center;
+    }
     
     header {
         color: #BF0909;

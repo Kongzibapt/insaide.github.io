@@ -215,6 +215,9 @@ body {
     opacity:0;
 }
 
+td{
+    text-align: center;
+}
 
     #supEye{
         flex:1;
