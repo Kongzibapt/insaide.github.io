@@ -16,6 +16,10 @@ header{
     
 }
 
+td{
+    text-align: center;
+}
+
 #headerTxt{
     margin:0;
     font-size:4.5vw;

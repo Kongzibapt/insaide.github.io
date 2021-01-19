@@ -14,7 +14,7 @@ function initError(){
     errorTxt.innerText = ""
 }
 
-function handleNavigation(event){
+function handleNavigation(){
     if (pseudo){
         initError();
         button.childNodes[1].setAttribute("href","HTML/etrange_decouverte.html")
