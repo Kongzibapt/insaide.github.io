@@ -11,8 +11,6 @@ function handleLienCryptoClicked() {
     buttons.removeChild(button1);
     buttons.removeChild(button2);
 
-    //lienCrypto.removeEventListener("click", handleLienCryptoClicked);
-
     //Création et ajout de l'audio
     let audioPas = document.createElement("audio");
     audioPas.setAttribute("preload", "auto");

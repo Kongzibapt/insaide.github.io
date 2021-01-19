@@ -9,6 +9,10 @@ body {
     height: 95vh;
 }
 
+    @keyframes fondu {
+        100% {opacity : 0;}
+    }
+    
     header {
         color: #BF0909;
         font-family: 'Special Elite', cursive;
