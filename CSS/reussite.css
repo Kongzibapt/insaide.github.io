@@ -66,13 +66,18 @@ body {
             #p1{
                 opacity:0;
                 margin:0.1vh 0vw 0.1vh 0vw;
-                animation: fade 2s forwards;
+                animation: fadein 2s forwards;
                 
             }
 
-            @keyframes fade {
+            @keyframes fadein {
                 0% {opacity :0}
                 100% {opacity:1}
+            }
+
+            @keyframes fadeout {
+                0% {opacity :1}
+                100% {opacity :0}
             }
 
 footer{
