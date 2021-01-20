@@ -2,9 +2,9 @@
 p = document.getElementById("p1");
 body = document.getElementById("body");
 texts = [
-    "Vous voyez beaucoup de personnes, des étudiants majoritairement, attablés et rigolants, ils ont l'air de prendre du bon temps",
+    "Vous voyez beaucoup de personnes, des étudiants majoritairement, mais aussi des professeurs, attablés et joyeux, ils ont l'air de prendre du bon temps si vous voyez ce que je veux dire",
     "Cet endroit vous rappelle les Speakeasy, ce genre de bars clandestins en Amérique",
-    "Vous avez un sentiment bizarre, vous entriez effrayé.e et êtes maintenant rassuré.e et l'ambiance vous a rendu.e jovial.e",
+    "Vous avez un sentiment bizarre, vous êtes entrés effrayé.e et êtes maintenant rassuré.e. L'ambiance vous a rendu.e jovial.e",
     "Vous seriez-vous joint à la fête ? On vous laisse y réfléchir...",
     "Merci d'avoir joué"
 ];
