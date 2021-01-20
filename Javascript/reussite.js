@@ -1,4 +1,4 @@
-// -------------- VARIABLES -------------//*
+// -------------- VARIABLES -------------//
 p = document.getElementById("p1");
 body = document.getElementById("body");
 texts = [
@@ -10,7 +10,7 @@ texts = [
 ];
 let i = 0;
 let imax = texts.length;
-// -------------- FUNCTIONS -------------//*ù
+// -------------- FUNCTIONS -------------//
 function fadeoutp() {
     p.style.cssText = "animation: fadeout 2s forwards";
 }
@@ -41,4 +41,4 @@ let repeater = setInterval(() => {
     }, 2000);
 }, 8000);
 
-// --------------- EVENTS ---------------//*
+// --------------- EVENTS ---------------//
